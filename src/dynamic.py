@@ -1,3 +1,5 @@
+import sys
+
 def read_input(input_file):
     vals = {}
     with open(input_file, "r") as f:
@@ -45,11 +47,13 @@ def highest_val_lcs(input_file):
     res.reverse()
     opt_res = "".join(res)
     print(max_value)
-    print(opt_res) 
+    print(opt_res)           
 
-        
 
-    ## input_file = "input1.txt"           
+def main():
+    # change input file to test different cases
+    input_file = "tests/input7.txt"
+    highest_val_lcs(input_file)
 
-input_file = "tests/input10.txt"
-highest_val_lcs(input_file)
+if __name__ == "__main__":
+    main()
