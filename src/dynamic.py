@@ -1,4 +1,5 @@
 import sys
+import time
 
 def read_input(input_file):
     vals = {}
@@ -52,8 +53,13 @@ def highest_val_lcs(input_file):
 
 def main():
     # change input file to test different cases
-    input_file = "tests/input7.txt"
+    input_file = "tests/runtime10.txt"
+    start = time.time()
     highest_val_lcs(input_file)
+    end = time.time()
+
+    print("Runtime: ", end - start, "seconds")
+
 
 if __name__ == "__main__":
     main()

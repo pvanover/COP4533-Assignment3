@@ -3,7 +3,17 @@
 Paige Vanover
 UFID: 22473613
 
+Victoria Villasana
+UFID: 86143370
+
 ## Question 1
+
+### Runtime Results
+![Runtime Table](data/Q1-chart.png)
+The chart shows the runtime values of the algorithm for input sizes 25 and 30 testing different edge cases.
+
+### Runtime Graph
+![Runtime Graph](data/Q1-Graph.png)
 
 ## Question 2
 Let $dp[i][j]$ = maximum value of a common subsequence of $A[0...i-1]$ and $B[0...j-1]$
