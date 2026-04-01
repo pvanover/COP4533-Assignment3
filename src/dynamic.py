@@ -11,8 +11,8 @@ def read_input(input_file):
     return numChars, vals, firstStr, secondStr
            
     
-def highest_val_lcs():
-    numChars, vals, firstStr, secondStr = read_input("input.txt")
+def highest_val_lcs(input_file):
+    numChars, vals, firstStr, secondStr = read_input(input_file)
     #compute a common subsequence of A and B that maximizes the total value
     #print a single integer which is the maximum value of a common subsequence o A and B
     #print one optimal subsequence of A and B with the maximum value, if multiple exist output any one of them
@@ -45,4 +45,11 @@ def highest_val_lcs():
     res.reverse()
     opt_res = "".join(res)
     print(max_value)
-    print(opt_res)                
+    print(opt_res) 
+
+        
+
+    ## input_file = "input1.txt"           
+
+input_file = "tests/input6.txt"
+highest_val_lcs(input_file)
