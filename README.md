@@ -6,6 +6,27 @@ UFID: 22473613
 Victoria Villasana
 UFID: 86143370
 
+## To get started:
+- Clone the repository into your desired Python supported IDE.
+- No external dependencies
+
+## Running the Program
+- Run dynamic.py and modify the filename variable inside main() to reference the input files that are inside the test/ file.
+- For each input(1-10).txt file in the testfiles/, there is a corresponding file input(1-10).out with the expected output in the tests/ folder. The output that is printed after running the program should match the contents of the corresponding .out file.
+
+## Assumptions:
+- Input file has the following format:
+    - First line: integer K (number of chars in the alphabet)
+    - Next K lines: each contains a character and the value it is associated with
+    - Next line: string A
+    - Next line: string B
+
+- All values are nonnegative
+- Strings A and B are not empty
+- When creating the program, we created sample output files in the tests folder for corresponding input files. The output in those output files should match the print output when running the program with the same input files.
+
+
+
 ## Question 1
 
 ### Runtime Results
@@ -37,6 +58,6 @@ If either of the strings are empty, then there is automatically no common subseq
 ### Pseuocode
 
 <p align="center">
-    <img src="data/Psuedocode.png" width="100">
+    <img src="data/Psuedocode.png" width="300">
 </p>
 The pseudocode above first fills 2 DP tables, values and lengths where n = length(A) and m = length(B). The total number of operations is the number of table entries which is (n+1)(m+1). There is an outer loop which is run n times and an inner loop ran m times, so the total iterations is n x m. Therefore, the runtime is O(nm).
