@@ -10,7 +10,7 @@ UFID: 86143370
 
 ### Runtime Results
 <p align="center">
-    <img src="data/Q1-chart.png" width="500">
+    <img src="data/Q1-chart.png" width="400">
 </p>
 The chart shows the runtime values of the algorithm for input sizes 25 and 30 testing different edge cases.
 
@@ -33,3 +33,10 @@ $$
 If either of the strings are empty, then there is automatically no common subsequence which explains the correctness of the base case. If there are characters that match, we include that character in the subsequence and add its value to the optimal solution. This works because dynamic programming breaks a problem into subproblems, so adding a matching character value to the optimal subsequence ensures a new optimal subsequence up to this point. If the characters don’t match then we don’t include those characters and choose the optimal subsequence to be the max of the optimal solution for A or the optimal solution for B and that makes sure that we are taking the most optimal value.
 
 ## Question 3
+
+### Pseuocode
+
+<p align="center">
+    <img src="data/Psuedocode.png" width="100">
+</p>
+The pseudocode above first fills 2 DP tables, values and lengths where n = length(A) and m = length(B). The total number of operations is the number of table entries which is (n+1)(m+1). There is an outer loop which is run n times and an inner loop ran m times, so the total iterations is n x m. Therefore, the runtime is O(nm).
